@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="tien" value>
+"<select name="" id="sl1">
+    <option value="a" >VNĐ</option>
+    <option value="b" >USD</option>
+</select>
+
+
+<select name="" id="sl2">
+    <option  value="a" >VNĐ</option>
+    <option value="b">USD</option>
+</select>
+<button onclick="doitien()">ketqua</button>
+<script> function doitien() {
+   var tien = document.getElementById("tien").value
+   var tien1 = document.getElementById("sl1").value
+    var tien2 = document.getElementById("sl2").value
+
+if (tien1 == tien2) {
+    document.write(tien)
+}
+if(tien1 == "a" && tien2 == "b"){
+
+
+    document.write(tien / 24000)
+
+}
+if(tien1 == "b" && tien2 == "a") {
+
+    document.write(tien * 24000)
+}
+
+
+}
+</script>
+</body>
+</html>
