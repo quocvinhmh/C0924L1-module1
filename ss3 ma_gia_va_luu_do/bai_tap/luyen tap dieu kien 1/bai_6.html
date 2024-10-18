@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="1" placeholder="lượt bán">
+<button onclick="ket()">kết quả</button>
+<div id="2"></div>
+
+<script>
+  function ket () {
+    let a = document.getElementById("1").value
+    let b;
+    if(a >= 10) {
+      document.getElementById("2").innerHTML= b = a * 0.05
+    }else if(a >= 50) {
+      document.getElementById("2").innerHTML= b = a * 0.10
+    }else if(a <= 100) {
+      document.getElementById("2").innerHTML= b = a * 0.20
+
+    }
+  }
+</script>
+</body>
+</html>

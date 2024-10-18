@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="1" placeholder="kết quả học tập">
+<button onclick="ket()">kết quả</button>
+<div id="2"></div>
+
+<script>
+  function ket () {
+let a = document.getElementById("1").value
+    if(a >= 8) {
+      document.getElementById("2").innerHTML="học sinh giỏi"
+    }else if(a >= 6.5) {
+        document.getElementById("2").innerHTML="học sinh khá"
+      }else if(a <= 5) {
+          document.getElementById("2").innerHTML="học sinh trung binh"
+
+        }
+  }
+
+
+
+</script>
+
+
+</body>
+</html>
