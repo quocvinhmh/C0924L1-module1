@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="1" placeholder="giá trị 1">
+<input type="text" id="2" placeholder="giá trị 2">
+<button onclick="gia()">-</button>
+<button onclick="gia1()">+</button>
+<div id="3" >0</div>
+<script>
+  function gia() {
+     let a = document.getElementById("1").value
+    let b = document.getElementById("2").value
+    var c = Number(a) - Number(b)
+   document.getElementById("3").innerHTML= c
+  }
+function gia1() {
+  let a = document.getElementById("1").value
+  let b = document.getElementById("2").value
+  let c =  Number(a) + Number(b)
+  document.getElementById("3").innerHTML= c
+}
+
+</script>
+</body>
+</html>
