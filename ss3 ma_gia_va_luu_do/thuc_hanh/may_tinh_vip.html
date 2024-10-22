@@ -10,49 +10,40 @@
   <td colspan="4"><input id="ketqua"></td>
 </tr>
 <tr>
-  <td><button onclick="appp()">1</button></td>
-  <td><button onclick="addtow()">2</button></td>
-  <td><button>3</button></td>
-  <td><button>+</button></td>
+  <td><button onclick="gia1(this.textContent)">1</button></td>
+  <td><button onclick="gia1(this.textContent)">2</button></td>
+  <td><button onclick="gia1(this.textContent)">3</button></td>
+  <td><button onclick="gia1(this.textContent)">+</button></td>
 </tr>
 <tr>
-  <td><button>4</button></td>
-  <td><button>5</button></td>
-  <td><button>6</button></td>
-  <td><button>-</button></td>
+  <td><button onclick="gia1(this.textContent)">4</button></td>
+  <td><button onclick="gia1(this.textContent)">5</button></td>
+  <td><button onclick="gia1(this.textContent)">6</button></td>
+  <td><button onclick="gia1(this.textContent)">-</button></td>
 </tr>
 <tr>
-  <td><button>7</button></td>
-  <td><button>8</button></td>
-  <td><button>9</button></td>
-  <td><button>x</button></td>
+  <td><button onclick="gia1(this.textContent)">7</button></td>
+  <td><button onclick="gia1(this.textContent)">8</button></td>
+  <td><button onclick="gia1(this.textContent)">9</button></td>
+  <td><button onclick="gia1(this.textContent)">*</button></td>
 </tr>
 <tr>
-  <td><button>C</button></td>
+  <td><button onclick="clead()">C</button></td>
   <td><button>0</button></td>
-  <td><button>=</button></td>
-  <td><button>/</button></td>
+  <td><button onclick="clacu()">=</button></td>
+  <td><button onclick="gia1(this.textContent)">/</button></td>
 </tr>
   <script>
-    function appp() {
-      let s = document.getElementById("ketqua").value;
-      document.getElementById("ketqua").value +=1;
+    function gia1(char) {
+      let a = document.getElementById("ketqua").value +=char
     }
-    function addtow(){
-      let s = document.getElementById("ketqua").value;
-      document.getElementById("ketqua").value += 2;
+    function clacu() {
+     let eva = document.getElementById("ketqua").value
+let adf = eval(eva)
+      document.getElementById("ketqua").value = adf
     }
-    function addthree(){
-      let s = document.getElementById("ketqua").value;
-      document.getElementById("ketqua").value =s+ 2;
-    }
-    function add3(){
-      let s = document.getElementById("ketqua").value;
-      document.getElementById("ketqua").value =s+ 2;
-    }
-    function add4(){
-      let s = document.getElementById("ketqua").value;
-      document.getElementById("ketqua").value =s+ 2;
+    function clead(){
+      document.getElementById("ketqua").value =""
     }
   </script>
 </table>
