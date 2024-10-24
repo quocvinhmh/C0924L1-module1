@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="startgame()">chơi</button>
+<script>
+  function startgame() {
+    let a = +prompt("nhập số muốn đoán")
+    let b = +prompt("nhập số đoán")
+    for (let i = 0; i <= 3; i++) {
+      if ( i == 3){
+        alert("bạn hết lược")
+        break
+      }
+      if (a != b) {
+        alert("số đoán sai " )
+        b = +prompt("nhập lại")
+      }
+      else {
+        alert("số bạn đoán đúng")
+        alert("kết thúc")
+        break
+      }
+      }
+
+  }
+
+
+
+</script>
+</body>
+</html>
