@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+
+  let amount = +prompt("Nhập số tiền vay ban đầu:");
+  let laiSuat = +prompt("Nhập lãi suất hàng tháng:");
+  let kyHan = +prompt("Nhập số tháng cho vay:");
+  let total = 0;
+
+  for (let i = 1; i <= kyHan; i++) {
+    total = kyHan*amount*(laiSuat/100) + amount;
+  }
+  document.write("Tổng số tiền phải trả mỗi tháng là: " + total);
+
+</script>
+</body>
+</html>

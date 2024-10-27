@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var a,b,c
+  a=+prompt("giá trị a")
+  b=+prompt("giá trị b")
+  c=+prompt("giá trị c")
+  if (a <= 0 || b <= 0 || c <= 0) {
+    alert("Không phải là 3 cạnh của một tam giác");}
+  else if (a + b > c
+    && b + c > a &&
+  a + c > b){
+    alert( a+","+b+","+c+" là cạch của tam giác")
+  }else {
+    alert("các số trên không phải cạch của tam giác")
+  }
+</script></body>
+</html>

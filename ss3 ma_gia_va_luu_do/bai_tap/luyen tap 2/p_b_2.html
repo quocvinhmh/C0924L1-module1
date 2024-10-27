@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a =+prompt("nhập giá trị a")
+let b =+prompt("nhập giá trị b")
+let c =+prompt("nhập giá trị c")
+if (a == 0){
+    if (b == 0){
+        if (c == 0){
+            alert("phương trình vô sô nghiện")
+        }else {
+            alert("ptvn")
+        }
+    }else{
+        let x = -c/b
+        alert('Nghiem phuong trinh x = ' + x)
+    }
+}else{
+    var dt = b*b-4*a*c
+}if (dt < 0){
+    alert("ptvn")
+}else if  (dt == 0){
+    x = -b/2*a
+    alert('Nghiem phuong trinh x = ' + x)
+}else {
+    x1 = (-b + Math.sqrt(dt))/(2*a)
+    x2 = (-b - Math.sqrt(dt))/(2*a)
+    alert(`Nghiem x1 = ${x1}, x2 = ${x2}`)
+}
+</script>
+</body>
+</html>

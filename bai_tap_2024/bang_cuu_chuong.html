@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "vinh"></div>
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+<script>
+    let a = "<table border='1'>"
+    let b = 10
+    for (let i = 0; i <= b; i++) {
+       a += "<tr>"
+        for (let j = 1; j <= b; j++) {
+           a +=`<td>${j}x${i}=${j*i}</td>`
+        }
+        a += "<tr>"
+    }
+    document.getElementById("vinh").innerHTML= a
+</script>
+</body>
+</html>
