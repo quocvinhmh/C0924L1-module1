@@ -7,16 +7,14 @@
 <body>
 <script>
 
-  let amount = +prompt("Nhập số tiền vay ban đầu:");
-  let laiSuat = +prompt("Nhập lãi suất hàng tháng:");
-  let kyHan = +prompt("Nhập số tháng cho vay:");
-  let total = 0;
-
-  for (let i = 1; i <= kyHan; i++) {
-    total = kyHan*amount*(laiSuat/100) + amount;
-  }
-  document.write("Tổng số tiền phải trả mỗi tháng là: " + total);
-
+let a =+prompt("nhập số tiền vay")
+let b = +prompt("nhập lãi suât hàng tháng")
+let c = +prompt("nhập số tháng cho vay")
+let d
+for (let i = 0; i < c; i++) {
+  d = c*a*(b/100)+ a
+}
+document.write("tổng số tiền phải trả hàng tháng là "+ d)
 </script>
 </body>
 </html>
