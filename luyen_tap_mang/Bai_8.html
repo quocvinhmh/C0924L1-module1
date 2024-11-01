@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let b =+prompt("nhập số lượng")
+        let a = new Array(10)
+        let c = 0
+        for (let i = 0; i < a.length; i++) {
+            a[i]=+prompt("nhập số nguyên " + (i+1))
+        }
+        for (let i = 0; i < a.length; i++) {
+        for (let index = 0; index < a.length; index++) {
+           if (a[i] < a[index]) {
+            c = a[i]
+            a[i] = a[index]
+            a[index]= c
+           }
+        }
+        }
+        document.write(a+ " ")
+    </script> 
+</body>
+</html>

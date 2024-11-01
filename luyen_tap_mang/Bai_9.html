@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayA = new Array(10);
+        let arrayB = new Array(10);
+       let c = []
+       for (let index = 0; index < arrayA.length; index++) {
+    arrayA[index]=+prompt("nhập giá trị A"+(index +1))
+       }
+       document.write("A: "+ arrayA + "<br>")
+       for (let index = 0; index < arrayB.length; index++) {
+        arrayB[index]=+prompt("nhập giá trị b" +(index +1))
+       }
+       document.write("B: " + arrayB + "<br>")
+       c = arrayA
+       for (let index = 0; index < arrayB.length; index++) {
+    c +="," +   arrayB[index]
+       }
+       document.write("Mảng C: "+ c + "</br>")
+    </script>
+</body>
+</html>

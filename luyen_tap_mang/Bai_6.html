@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let a =+prompt("nhập số lượng")
+  let b = new Array(a)
+  for (let i = 0; i < b.length; i++) {
+    b[i]=+prompt("nhập số nguyên V " + ( i + 1))
+  }
+  let v =+prompt("nhập số nguyên V")
+  let d = false
+  for (let i = 0; i < b.length; i++) {
+    if (v === b[i]){
+      d = true
+      break
+    }
+  }
+  if (d === true){
+alert( "V is in the array")
+  }else {
+    alert("V is not in the array")
+  }
+</script>
+</body>
+</html>

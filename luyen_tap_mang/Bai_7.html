@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="vinh"></div>
+<body>
+    <script>
+let a = new Array (10)
+for (let index = 0; index < a.length; index++) {
+a[index]=+prompt("nhập số nguyên " + (index+1))
+}
+let v =+prompt("nhập số đúng ")
+let s = false
+for (let index = 0; index < a.length; index++) {
+if (v === a[index]){
+    for (let i = index; i < a.length - 1; i++) {
+    a[i] = a[i + 1]
+    }
+    a[a.length - 1]= 0
+    index--
+}
+}
+document.write(a)
+    </script>
+</body>
+</html>

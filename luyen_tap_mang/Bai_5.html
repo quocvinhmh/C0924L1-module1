@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let b =+prompt("nhập số lượng chuỗi")
+  let a = new Array(b)
+  let c = 0
+  for (let i = 0; i < a.length; i++) {
+    a[i] =+prompt("nhập số nguyên " + ( i+1))
+    if (a[i]<0){
+      c++
+    }
+
+  }
+document.write(a+"<br>")
+  document.write(c)
+</script>
+</body>
+</html>
