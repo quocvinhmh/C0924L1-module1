@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let a = new Array(2)
+  let b = true
+  for (let i = 0; i < a.length - 1; i++) {
+    a[i] = prompt("Nhập phần tử thứ: " + (i + 1));
+    a[i + 1] = prompt("Nhập phần tử thứ: " + (i + 2));
+    if (a[i]==a[i+1]){
+      b= false
+      break
+    }
+  }
+  if (b== false){
+    alert("giống nhau")
+  }else {
+    alert("0 giống nhau")
+  }
+</script>
+</body>
+</html>

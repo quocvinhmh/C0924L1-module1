@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="ud" placeholder="nhập thông tin">
+<button onclick="them()">gửi</button>
+<span>số lượng sản phẩm: </span> <span id="soluong"></span>
+  <div id="a"></div>
+
+<script>
+  let a = ["sam sung","vinh","lộc","an"]
+  display()
+
+  function display() {
+    let b = `<table border="">
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Update</th>
+    <th>delete</th>
+  </tr>`
+
+      for (let i = 0;i < a.length; i++) {
+        b += ` <tr>
+     <td>${i + 1}</td>
+     <td>${a[i]}</td>
+     <td><button onclick="ud(${i})">update</button></td>
+     <td><button onclick="xoa(${i})">Delete</button></td>
+        </tr>`
+      }
+
+      b += `</table>`
+      document.getElementById('a').innerHTML = b
+    document.getElementById('soluong').innerHTML = a.length
+    }
+
+
+    function them() {
+      let newp= document.getElementById("ud").value
+      if (newp!=''){
+        a.push(newp)
+      }else {
+        alert("vui lòng nhập")
+      }
+      display()
+    }
+
+
+    function xoa(index){
+    let cont = confirm("xóa "+a[index]  )
+ if (cont){
+   a.splice(index,1)
+ }
+      display()
+    }
+
+    function ud(index) {
+   let thay = document.getElementById("ud").value
+      if (thay!=""){
+     a.splice(index,1,thay)}else {
+        alert("vui lòng nhập")
+      }
+      display()
+    }
+</script>
+</body>
+</html>
