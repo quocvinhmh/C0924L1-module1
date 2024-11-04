@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isGiaithua(a) {
+    let giaiThua = 1;
+    if(a == 0 || a == 1) {
+      giaiThua = 1;
+    }else {
+      for (let i = 1; i <= a; i++) {
+        giaiThua = giaiThua * i;
+      }
+    }
+    document.write("Giai thừa của "+a+" = "+giaiThua);
+  }
+  let b =+ prompt("nhap so can tim giai thua: ");
+  isGiaithua(b);
+</script>
+</body>
+</html>
