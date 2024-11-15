@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkTriangle(x,y,z){
+
+    if(!isNaN(x) && !isNaN(y) && !isNaN(z)){
+        true
+    }
+    else{
+        alert("Giá trị nhập vào chưa hợp lệ. Vui lòng nhập lại");
+}
+      if (x > 0 && y > 0 && z > 0 && x < y + z && y < x + z && z < x + y) {
+          if (
+              x * x == y * y + z * z ||
+              y * y == x * x + z * z ||
+              z * z == x * x + y * y
+          ) {
+              return `là cạnh của một tam giác vuông`;
+          }
+          return `chỉ là 3 cạnh của một tam giác`;
+      }
+      return `không phải là cạnh của một tam giác`;
+  }
+        let canhA = +prompt("Nhập cạnh A");
+        let canhB = +prompt("Nhập cạnh B");
+        let canhC = +prompt("Nhập cạnh C");
+  console.log(checkTriangle(canhA,canhB,canhC))
+</script>
+</body>
+</html>

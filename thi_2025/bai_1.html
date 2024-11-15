@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vinh"></div>
+<script>
+    let a =+prompt("nhập số mảng")
+  let b = new Array(a)
+  for (let i = 0; i < b.length; i++) {
+    b[i] = prompt("nhập mảng thứ "+ (i+1) )
+  }
+  console.log(b)
+
+    check = true
+    if(b <= 1){
+        alert("mảng không thỏa điều kiện")
+    }else if (b == 2){
+        if (b[0] > b[1]){
+            check = false
+        }
+    }else {
+        let khoangcach = b[1] - b[0]
+        for (let i = 2; i < b.length; i++) {
+            if (b[i] - b[i - 1] !== khoangcach) {
+                check = false
+                break
+            }
+        }
+    }
+    if (check){
+        alert("ok")
+    }else {
+        alert("no")
+    }
+</script>
+</body>
+</html>
