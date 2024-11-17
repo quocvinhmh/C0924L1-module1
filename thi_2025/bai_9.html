@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a =+prompt("nhập giá trị của mảng")
+  let b = new Array(a)
+  for (let i = 0; i < b.length; i++) {
+    b[i]=+prompt("nhập mảng thứ "+ (i+1))
+  }
+  console.log("mảng sau khi nhập: "+ b)
+  let f =false
+  for (let i = 0; i < b.length -1; i+=2 ) {
+    if (b[i]>=b[i+1]){
+      f = true
+    }
+  }
+  if (f){
+    console.log("No")
+  }else {
+    console.log("OK")
+  }
+</script>
+</body>
+</html>

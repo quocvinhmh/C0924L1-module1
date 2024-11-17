@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("nhập giá trị của mảng")
+    let b = new Array(a)
+    for (let i = 0; i < b.length; i++) {
+        b[i]=+prompt("nhập mảng thứ "+ (i+1))
+    }
+    console.log("mảng sau khi nhập: "+ b)
+    console.log(checkAllPrime(b));
+
+    function checkAllPrime(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (checkPrime(arr[i])) {
+                count++;
+            }
+        }
+        if (count === arr.length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkPrime(n) {
+        let count = 0;
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+</script>
+</body>
+</html>

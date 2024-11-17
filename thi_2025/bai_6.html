@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("nhập giá trị của mảng")
+    let b = new Array(a)
+    for (let i = 0; i < b.length; i++) {
+        b[i]=+prompt("nhập mảng thứ "+ (i+1))
+    }
+    console.log("mảng sau khi nhập: "+ b)
+    let le= false
+    let chan=false
+    for (let i = 0; i < b.length; i++) {
+        if (b[i]%2==0){
+chan= true
+        }else {
+            le=true
+        }
+    }
+    if (le && chan){
+        console.log(-1)
+    }else if (chan){
+        console.log(1)
+    }else {
+        console.log(0)
+    }
+</script>
+</body>
+</html>
