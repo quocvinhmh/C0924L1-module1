@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a =+prompt("nhập số mảng")
+  let b = new Array(a)
+  for (let i = 0; i < b.length; i++) {
+    b[i] = prompt("nhập mảng thứ "+ (i+1) )
+  }
+  console.log(b)
+  if (b.length >= 50){
+    alert("vượt quá 50 phân tử")
+  }
+  let sum = 0
+  let c = 0
+  for (let i = 0; i < b.length; i++) {
+    if (b[i]%3===0){
+      sum +=b[i]
+      c++
+    }
+  }
+  if (c > 0){
+    console.log("Trung bình cộng các số chia hết cho 3:"+ sum / c);
+  } else {
+    console.log("Không có số nào trong mảng chia hết cho 3.");
+  }
+</script>
+</body>
+</html>

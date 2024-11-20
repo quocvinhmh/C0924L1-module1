@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Công Nhân</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<h1>Danh Sách Công Nhân</h1>
+<table id="workerTable">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Họ và Tên</th>
+    <th>Ngày Sinh</th>
+    <th>Địa Chỉ</th>
+    <th>Lương</th>
+    <th>Chức Vụ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Danh sách công nhân sẽ hiển thị ở đây -->
+  </tbody>
+</table>
+
+<script>
+
+  class Worker {
+    constructor(stt, fullName, dob, address, salary, position) {
+      this.stt = stt;
+      this.fullName = fullName;
+      this.dob = dob;
+      this.address = address;
+      this.salary = salary;
+      this.position = position;
+    }
+  }
+
+
+  const workers = [
+    new Worker(1, "Nguyễn Văn A", "1980-05-15", "Hà Nội", 10000000, "Nhân viên"),
+    new Worker(2, "Trần Thị B", "1990-08-20", "Hồ Chí Minh", 15000000, "Quản lý"),
+    new Worker(3, "Lê Minh C", "1985-03-10", "Đà Nẵng", 12000000, "Kỹ sư"),
+    new Worker(4, "Phạm Thị D", "1995-11-12", "Hà Nội", 11000000, "Nhân viên"),
+  ];
+
+
+  function sortWorkersByName(workers) {
+    workers.sort((a, b) => {
+      const nameA = a.fullName.split(" ")[1].toLowerCase(); // lấy tên riêng
+      const nameB = b.fullName.split(" ")[1].toLowerCase(); // lấy tên riêng
+      return nameA.localeCompare(nameB);
+    });
+  }
+
+
+  function displayWorkers() {
+    const tableBody = document.querySelector("#workerTable tbody");
+    tableBody.innerHTML = ""; // Xóa các dòng hiện tại trong bảng
+
+    workers.forEach((worker) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+          <td>${worker.stt}</td>
+          <td>${worker.fullName}</td>
+          <td>${worker.dob}</td>
+          <td>${worker.address}</td>
+          <td>${worker.salary}</td>
+          <td>${worker.position}</td>
+        `;
+      tableBody.appendChild(row);
+    });
+  }
+
+
+  sortWorkersByName(workers);
+  displayWorkers();
+</script>
+</body>
+</html>
